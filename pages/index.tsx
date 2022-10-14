@@ -1,16 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Header from '../components/Header';
+
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>AirCloneNClone</title>
         <meta name="description" content="Airbnb Clone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Hi Welcome to AirCloneNClone</h1>
+      <Header />
+      {/* Banner */}
     </div>
   );
 };

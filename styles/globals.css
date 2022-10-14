@@ -1,9 +1,13 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    display: block;
 }
 
 a {
@@ -11,16 +15,33 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  /* header */
+  .header {
+    @apply sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10
   }
-  body {
-    color: white;
-    background: black;
+  .logo {
+    @apply h-10 relative flex items-center cursor-pointer my-auto
+  }
+  .searchbar {
+    @apply flex items-center md:border-2 rounded-full py-2 md:shadow-sm
+  }
+  .searchInput {
+    @apply pl-5 flex-grow bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400
+  }
+  .searchIcon {
+    @apply h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer hidden md:inline-flex md:mx-2
+  }
+  .user {
+    @apply flex space-x-4 items-center justify-end text-gray-500
+  }
+  .userText {
+    @apply hidden md:inline cursor-pointer
+  }
+  .headerIcon {
+    @apply h-6 cursor-pointer
+  }
+  .userProfile {
+    @apply flex items-center space-x-2 border-2 rounded-full p-2
   }
 }
