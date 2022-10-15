@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    display: block;
+  display: block;
 }
 
 a {
@@ -18,30 +18,43 @@ a {
 @layer components {
   /* header */
   .header {
-    @apply sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10
+    @apply sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10;
   }
   .logo {
-    @apply h-10 relative flex items-center cursor-pointer my-auto
+    @apply h-10 relative flex items-center cursor-pointer my-auto;
   }
   .searchbar {
-    @apply flex items-center md:border-2 rounded-full py-2 md:shadow-sm
+    @apply flex items-center md:border-2 rounded-full py-2 md:shadow-sm;
   }
   .searchInput {
-    @apply pl-5 flex-grow bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400
+    @apply pl-5 flex-grow bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400;
   }
   .searchIcon {
-    @apply h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer hidden md:inline-flex md:mx-2
+    @apply h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer hidden md:inline-flex md:mx-2;
   }
   .user {
-    @apply flex space-x-4 items-center justify-end text-gray-500
+    @apply flex space-x-4 items-center justify-end text-gray-500;
   }
   .userText {
-    @apply hidden md:inline cursor-pointer
+    @apply hidden md:inline cursor-pointer;
   }
   .headerIcon {
-    @apply h-6 cursor-pointer
+    @apply h-6 cursor-pointer;
   }
   .userProfile {
-    @apply flex items-center space-x-2 border-2 rounded-full p-2
+    @apply flex items-center space-x-2 border-2 rounded-full p-2;
+  }
+  /* banner */
+  .banner {
+    @apply relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px];
+  }
+  .banner-center {
+    @apply absolute top-1/2 w-full text-center;
+  }
+  .banner-text {
+    @apply text-sm sm:text-lg font-bold text-gray-800;
+  }
+  .banner-button {
+    @apply text-purple-200 bg-gray-700 px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150;
   }
 }
