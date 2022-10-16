@@ -57,4 +57,16 @@ a {
   .banner-button {
     @apply text-purple-200 bg-gray-700 px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150;
   }
+  .main {
+    @apply max-w-7xl mx-auto px-8 sm:px-16
+  }
+  .firstSection-title {
+    @apply text-4xl font-semibold pb-5
+  }
+  .firstSection-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+  }
+  .exploreCard {
+    @apply flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out
+  }
 }
